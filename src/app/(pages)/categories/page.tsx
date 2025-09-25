@@ -1,4 +1,4 @@
-import { Categories } from '@/interfaces/categories';
+import type { Categories } from '@/interfaces/categories';
 import Image from 'next/image';
 import Link from 'next/link';
 

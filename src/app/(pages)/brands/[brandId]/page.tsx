@@ -10,20 +10,23 @@ import {
   CardContent,
 } from "@/components/ui/card"
 import Link from 'next/link'
-
 import { formatCurrency } from '@/Utilities/formatPrice'
 import AddToCart from '../../products/_components/AddToCart/AddToCart'
 
-export default async function BrandPage({ params }: { params: { brandId: string } }) {
+type BrandPageProps = {
+  params: {
+    brandId: string
+  }
+}
+
+export default async function BrandPage({ params }: BrandPageProps) {
   const { brandId } = params
 
- 
-  const brandResponse = await fetch(`https://ecommerce.routemisr.com/api/v1/brands/`+brandId, {
+  const brandResponse = await fetch(`https://ecommerce.routemisr.com/api/v1/brands/${brandId}`, {
     next: { revalidate: 10 * 60 }
   })
   const { data: brand }: { data: BrandI } = await brandResponse.json()
 
-  
   const productResponse = await fetch(`https://ecommerce.routemisr.com/api/v1/products?brand=${brandId}`, {
     next: { revalidate: 10 * 60 }
   })
@@ -31,7 +34,6 @@ export default async function BrandPage({ params }: { params: { brandId: string 
 
   return (
     <div className="container mx-auto px-4">
-    
       <div className="text-center my-6">
         <Image
           src={brand.image}

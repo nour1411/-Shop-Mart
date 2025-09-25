@@ -2,13 +2,10 @@
 import React, { useContext } from 'react'
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
+  
 } from "@/components/ui/navigation-menu"
 import Link from 'next/link'
 import {
@@ -19,8 +16,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { HeartIcon, Loader, Loader2, Loader2Icon, ShoppingCartIcon, User2Icon, UserIcon } from 'lucide-react'
-import { Badge } from '../ui/badge'
+import { HeartIcon, Loader2, Loader2Icon, ShoppingCartIcon, UserIcon } from 'lucide-react'
+
 import { CartContext } from '../Context/CartContext'
 import { WishlistContext } from '../Context/WishlistContext'
 import { signOut, useSession } from 'next-auth/react'

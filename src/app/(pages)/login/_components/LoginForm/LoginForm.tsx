@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -30,7 +29,7 @@ type LoginFields=z.infer<typeof formSchema>
 
 export function LoginForm() {
    
-    let searchParams =useSearchParams();
+    const searchParams =useSearchParams();
 
     const [isLoading, setIsLoading] = useState(false)
     const [apiError, setApiError] = useState(searchParams.get('error'))

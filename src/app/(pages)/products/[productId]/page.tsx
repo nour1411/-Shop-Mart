@@ -4,17 +4,11 @@ import React from 'react'
 
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import Link from 'next/link';
-import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { HeartIcon, ShoppingCartIcon } from 'lucide-react';
 import AddToCart from '../_components/AddToCart/AddToCart';
 import { formatCurrency } from '@/Utilities/formatPrice';
 import ProductSlider from '../_components/ProductSlider/ProductSlider';

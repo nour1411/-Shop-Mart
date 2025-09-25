@@ -6,13 +6,10 @@ import {
   CardAction,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { HeartIcon, ShoppingCartIcon, StarIcon } from 'lucide-react';
 import Link from 'next/link';
 import AddToCart from './_components/AddToCart/AddToCart';
 import { formatCurrency } from '@/Utilities/formatPrice';

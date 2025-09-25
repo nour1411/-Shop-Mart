@@ -7,7 +7,7 @@ const authPages=['/login','/register'];
 export default async function middleware(req:NextRequest) {
     
 
-    let token = await getToken({req});
+   const token = await getToken({req});
 
 
     if (protectedPages.includes(req.nextUrl.pathname)) {

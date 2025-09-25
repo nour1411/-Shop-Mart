@@ -7,7 +7,6 @@ import { formatCurrency } from '@/Utilities/formatPrice'
 import { Loader2, Trash2 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { it } from 'node:test'
 import React, { useContext, useState } from 'react'
 import toast from 'react-hot-toast'
 import CheckoutSession from '../CheckoutSession/CheckoutSession'
@@ -189,7 +188,7 @@ export default function InnerCart() {
                     SubTotal ({cartData?.numOfCartItems} items)
                   </span>
                   <span className="font-semibold">
-                    {formatCurrency(cartData?.data.totalCartPrice!)}
+                    {formatCurrency(cartData?.data?.totalCartPrice)}
                   </span>
                 </div>
                 <div className="flex items-center justify-between">
@@ -205,7 +204,7 @@ export default function InnerCart() {
               <div className="flex items-center justify-between">
                 <span className="text-base font-semibold">Total</span>
                 <span className="text-base font-bold">
-                  {formatCurrency(cartData?.data.totalCartPrice!)}
+                  {formatCurrency(cartData?.data?.totalCartPrice)}
                 </span>
               </div>
 

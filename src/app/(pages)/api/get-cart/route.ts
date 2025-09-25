@@ -1,7 +1,7 @@
 import { getUserToken } from "@/Utilities/getToken";
-import { decode } from "next-auth/jwt";
-import { cookies } from "next/headers";
-import { NextRequest, NextResponse } from "next/server";
+
+
+import {  NextResponse } from "next/server";
 
 
 export async function GET(){
