@@ -27,7 +27,7 @@ const [isLoading, setIsLoading] = useState<boolean>(true);
 async function getWishlist() {
     const token = await getUserToken();
          setIsLoading(true)
-    const response=await fetch(`http://localhost:3000/api/get-wishlist`,{
+    const response=await fetch(`https://shop-mart-topaz.vercel.app/api/get-wishlist`,{
         method:"GET",
         headers:{
             token:token+''

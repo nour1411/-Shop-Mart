@@ -24,7 +24,7 @@ const [isLoading, setIsLoading] = useState<boolean>(true);
 async function getCart() {
     setIsLoading(true)
     if(session.status=='authenticated'){
-        const response=await fetch(`http://localhost:3000/api/get-cart`);
+        const response=await fetch(`https://shop-mart-topaz.vercel.app/api/get-cart`);
   
     const payload= await response.json();
    setCartData(payload);
