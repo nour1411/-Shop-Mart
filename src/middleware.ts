@@ -9,7 +9,8 @@ export default async function middleware(req:NextRequest) {
 
    const token = await getToken({req});
 
-
+    console.log(token);
+    
     if (protectedPages.includes(req.nextUrl.pathname)) {
         if (token) {
                return NextResponse.next()
@@ -25,7 +26,7 @@ export default async function middleware(req:NextRequest) {
                 return NextResponse.redirect(redirectUrl)
         }else{
           
-    return NextResponse.next()
+            return NextResponse.next()
         }
     }
 
