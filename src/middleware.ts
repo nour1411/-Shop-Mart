@@ -1,5 +1,5 @@
-import { getToken } from "next-auth/jwt";
 import { NextRequest, NextResponse } from "next/server";
+import { getUserToken } from "./Utilities/getToken";
 
 const protectedPages=['/cart','/profile','/wishlist'];
 const authPages=['/login','/register'];
@@ -7,7 +7,7 @@ const authPages=['/login','/register'];
 export default async function middleware(req:NextRequest) {
     
 
-   const token = await getToken({req});
+   const token = await getUserToken()
 
     console.log(token);
     
